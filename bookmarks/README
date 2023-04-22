@@ -4,3 +4,5 @@ This is a personal bash script to efficiently bookmark/open common websites via 
 
   user enters an array, and we interpret the array o(n) until empty and have opened all the sites I want for example bookmarks o 1 2 3 to open bookmarks
   corresponding to the numbers 1 to 3
+  
+  Just take in a string, then iterate through the bytes evaluate each one individually o(n)
