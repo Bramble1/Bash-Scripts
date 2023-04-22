@@ -3,3 +3,6 @@ lsmem	- list mem information
 lsblk	- list block information
 lspci	- list bus information
 lsof	- list open files
+cut	- text cut out bytes from text
+awk	-text 
+sed	-text
