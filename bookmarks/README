@@ -1,11 +1,13 @@
-This is a personal bash script to efficiently bookmark/open common websites via terminal.
+This is a personal bash script to  bookmark/open commonly used websites via terminal.
 
-# Improvements completed. Can now enter a string of numbers to open multiple bookmarks at the same time
+[+] Improvements completed. Can now enter a string of numbers to open multiple bookmarks at the same time
 
-#usage
-./bookmark.sh         -run with no arguments to print the help screen and how to use
+Usage:
+______
+	./bookmark.sh         -run with no arguments to print the help screen and how to use
 
 
-#misc
+Misc:
+_____
 
 I've added an alias to my .bashrc so i can just access the script and it's bookmarks.txt record from anywhere.
