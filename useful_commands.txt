@@ -1,0 +1,5 @@
+lscpu 	- list cpu information
+lsmem	- list mem information
+lsblk	- list block information
+lspci	- list bus information
+lsof	- list open files
