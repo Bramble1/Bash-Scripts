@@ -1,8 +1,11 @@
 This is a personal bash script to efficiently bookmark/open common websites via terminal.
 
-# improvements
+# Improvements completed. Can now enter a string of numbers to open multiple bookmarks at the same time
 
-  user enters an array, and we interpret the array o(n) until empty and have opened all the sites I want for example bookmarks o 1 2 3 to open bookmarks
-  corresponding to the numbers 1 to 3
-  
-  Just take in a string, then iterate through the bytes evaluate each one individually o(n)
+#usage
+./bookmark.sh         -run with no arguments to print the help screen and how to use
+
+
+#misc
+
+I've added an alias to my .bashrc so i can just access the script and it's bookmarks.txt record from anywhere.
