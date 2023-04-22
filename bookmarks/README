@@ -4,10 +4,9 @@ This is a personal bash script to  bookmark/open commonly used websites via term
 
 Usage:
 ______
-	./bookmark.sh         -run with no arguments to print the help screen and how to use
+./bookmark.sh         -run with no arguments to print the help screen and how to use
 
 
 Misc:
 _____
-
 I've added an alias to my .bashrc so i can just access the script and it's bookmarks.txt record from anywhere.
