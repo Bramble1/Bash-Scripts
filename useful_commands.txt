@@ -6,3 +6,4 @@ lsof	- list open files
 cut	- text cut out bytes from text
 awk	-text 
 sed	-text
+tmux	-terminal emulator
