@@ -26,8 +26,6 @@ set_file_permissions()
 
 connect()
 {
-	verify_pemfile $1
-	set_file_permissions $1
 	echo -e "connect [+]:\n "
 	echo -e "Enter username: "
         read user_name
@@ -36,10 +34,16 @@ connect()
 	ssh -i $1 $user_name@$ip_address
 }
 
+default_connect()
+{
+	verify_pemfile $1
+	set_file_permissions $1
+	connect $1
+}
 quick_connect()
 {
 	echo -e "grabbing assumed only pem file from downloads/ [+]\n"
-	echo -e "connect [+]:\n"
+	echo -e "quick connect [+]:\n"
 	pemFile=$(ls ~/Downloads/*.pem | sort)
 	verify_pemfile $pemFile
 	set_file_permissions $pemFile
@@ -54,7 +58,7 @@ case $1 in
 	       quick_connect
 	       ;;
        *)
-	       connect $1
+	       default_connect $1
 	       ;;
 esac
 exit
