@@ -29,6 +29,7 @@ static const Rule rules[] = {
 	/* class      instance    title       tags mask centered    isfloating   monitor */
 	{ NULL, NULL,  "calc",  0,	1,      1,      -1 },
 	{ NULL, NULL, "htop",0,1,1,-1},
+	{ NULL,NULL,"small-term",0,1,1,-1},
 	{ "konsole",	NULL,	NULL,	0,	1,	1,	-1},
 	{ "Firefox",  NULL,       NULL,       1 << 8,   -1,    0,           -1 },
 };
@@ -62,6 +63,7 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont,
 static const char *termcmd[]  = { "mate-terminal", NULL };
 static const char *calculator[] = {"mate-terminal","--title=calc","--profile=Calculator",NULL};
 static const char *htop[] = {"mate-terminal","--title=htop","--profile=htop",NULL};
+static const char *small_term[] = {"mate-terminal","--title=small-term","--profile=small-term",NULL};
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -78,7 +80,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_Tab,    view,           {0} },
 	{ MODKEY|ShiftMask,             XK_c,      killclient,     {0} },
 	{ MODKEY,			XK_c,	   spawn,	   {.v = calculator} },
-	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
+	{ MODKEY,                       XK_t,      spawn,      	   {.v = small_term} },
 	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
 	{ MODKEY,                       XK_m,      spawn,      	   {.v = htop} },
 	{ MODKEY,                       XK_space,  setlayout,      {0} },
