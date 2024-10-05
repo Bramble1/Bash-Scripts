@@ -28,6 +28,7 @@ static const Rule rules[] = {
 	 */
 	/* class      instance    title       tags mask centered    isfloating   monitor */
 	{ NULL, NULL,  "calc",  0,	1,      1,      -1 },
+	{ NULL, NULL, "htop",0,1,1,-1},
 	{ "konsole",	NULL,	NULL,	0,	1,	1,	-1},
 	{ "Firefox",  NULL,       NULL,       1 << 8,   -1,    0,           -1 },
 };
@@ -35,7 +36,7 @@ static const Rule rules[] = {
 /* layout(s) */
 static const float mfact     = 0.55; /* factor of master area size [0.05..0.95] */
 static const int nmaster     = 1;    /* number of clients in master area */
-static const int resizehints = 1;    /* 1 means respect size hints in tiled resizals */
+static const int resizehints = 0;    /* 1 means respect size hints in tiled resizals */
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
@@ -60,6 +61,7 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "mate-terminal", NULL };
 static const char *calculator[] = {"mate-terminal","--title=calc","--profile=Calculator",NULL};
+static const char *htop[] = {"mate-terminal","--title=htop","--profile=htop",NULL};
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -78,7 +80,7 @@ static Key keys[] = {
 	{ MODKEY,			XK_c,	   spawn,	   {.v = calculator} },
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
 	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
-	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
+	{ MODKEY,                       XK_m,      spawn,      	   {.v = htop} },
 	{ MODKEY,                       XK_space,  setlayout,      {0} },
 	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
 	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
